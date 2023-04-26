@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    background-color: #bdbbbf;
+}
+
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.caption {
+    font: italic bold 36px Arial;
+    color: #605b6b;
+}
+
+.textarea {
+    width: 80%;
+}
+
+.keyboard {
+    width: 80%;
+}
+
+.info {
+    margin: 0 auto;
+    font: italic 24px Arial;
+    color: #605b6b;
+}
+
+.keyboard__key {
+    width: 45px;
+    height: 45px;
+    background-color: whitesmoke;
+    color: black;
+    font-size: medium;
+}
