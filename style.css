@@ -21,19 +21,46 @@ body {
 }
 
 .keyboard {
+    margin-top: 30px;
     width: 80%;
 }
 
 .info {
-    margin: 0 auto;
+    margin: 30px auto;
     font: italic 24px Arial;
     color: #605b6b;
 }
 
 .keyboard__key {
-    width: 45px;
-    height: 45px;
+    min-width: 35px;
+    height: 35px;
     background-color: whitesmoke;
     color: black;
     font-size: medium;
+    text-align: center;
+    margin: 3px;
+    line-height: 40px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.keySpace {
+    width: 500px;
+}
+
+.keyEnter,
+.keyShift {
+    width: 75px;
+}
+
+.keyTab,
+.keyTab,
+.keyCtrl,
+.keyCaps {
+    width: 50px;
 }
