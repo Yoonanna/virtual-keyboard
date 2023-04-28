@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background-color: #bdbbbf;
+    background-color: #81968d;
 }
 
 .wrapper {
@@ -13,17 +13,22 @@ body {
 
 .caption {
     font: italic bold 36px Arial;
-    color: #605b6b;
+    color: #536b65;
 }
 
 .textarea {
-    width: 80%;
+    width: 700px;
+    border-radius: 8px;
+    background-color: rgb(221, 241, 229);
 }
 
 .keyboard {
     margin-top: 30px;
-    width: 80%;
+    width: 700px;
+    background-color: #004445;
+    border-radius: 8px;
 }
+
 
 .info {
     margin: 30px auto;
@@ -32,14 +37,28 @@ body {
 }
 
 .keyboard__key {
+    cursor: pointer;
     min-width: 35px;
-    height: 35px;
-    background-color: whitesmoke;
+    min-height: 35px;
+    background-color: #a0d9b9;
     color: black;
-    font-size: medium;
+    font-size: large;
+    font-weight: 600;
     text-align: center;
     margin: 3px;
     line-height: 40px;
+    border-radius: 8px;
+}
+
+/* .keyboard__key:hover {
+    background-color: #837695;
+} */
+.Backspace {
+    flex-grow: 0.5;
+}
+
+.active {
+    background-color: #303d40;
 }
 
 .row {
@@ -49,18 +68,27 @@ body {
     width: 100%;
 }
 
-.keySpace {
-    width: 500px;
+.Space {
+    width: 300px;
 }
 
-.keyEnter,
-.keyShift {
-    width: 75px;
+.Enter,
+.ShiftLeft,
+.ShiftRight {
+    flex-grow: 0.35;
+
 }
 
-.keyTab,
-.keyTab,
-.keyCtrl,
-.keyCaps {
-    width: 50px;
+.Tab,
+.Delete,
+.ControlLeft,
+.ControlRight,
+.CapsLock {
+    flex-grow: 0.3;
+}
+
+.AltRight,
+.AltLeft,
+.MetaLeft {
+    flex-grow: 0.7;
 }
