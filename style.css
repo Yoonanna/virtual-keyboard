@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    background-color: #81968d;
+}
+
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.caption {
+    font: italic bold 36px Arial;
+    color: #536b65;
+    margin-bottom: 20px;
+}
+
+.textarea {
+    width: 700px;
+    border-radius: 8px;
+    background-color: rgb(221, 241, 229);
+}
+
+.keyboard {
+    margin-top: 30px;
+    width: 700px;
+    background-color: #004445;
+    border-radius: 8px;
+}
+
+
+.info {
+    margin: 10px auto;
+    font: italic 24px Arial;
+    color: #605b6b;
+}
+
+.keyboard__key {
+    cursor: pointer;
+    min-width: 35px;
+    min-height: 35px;
+    background-color: #a0d9b9;
+    color: black;
+    font-size: large;
+    font-weight: 600;
+    text-align: center;
+    margin: 3px;
+    line-height: 40px;
+    border-radius: 8px;
+}
+
+/* .keyboard__key:hover {
+    background-color: #837695;
+} */
+.Backspace {
+    flex-grow: 0.5;
+}
+
+.active {
+    background-color: #303d40;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.Space {
+    width: 300px;
+}
+
+.Enter,
+.ShiftLeft,
+.ShiftRight {
+    flex-grow: 0.25;
+
+}
+
+.Tab,
+.Delete,
+.ControlLeft,
+.ControlRight,
+.CapsLock {
+    flex-grow: 0.3;
+}
+
+.AltRight,
+.AltLeft,
+.MetaLeft {
+    flex-grow: 0.7;
+}
