@@ -289,7 +289,7 @@ info.innerText = 'Клавиатура создана в ОС Windows';
     document.addEventListener('keydown', function keyDown(event) {
       if (event.code === 'Space') {
         textarea.value += '';
-        key.classList.add('active');
+
       } else
         if (event.code === el.keyCode) {
           key.classList.add('active');
@@ -312,9 +312,7 @@ info.innerText = 'Клавиатура создана в ОС Windows';
     key.addEventListener('mousedown', () => {
       if (el.keyCode === 'Space') {
         textarea.value += " ";
-
         key.classList.add('active');
-
       } else {
         key.classList.add('active');
         textarea.value += `${el.keyName}`;
