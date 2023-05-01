@@ -14,6 +14,7 @@ body {
 .caption {
     font: italic bold 36px Arial;
     color: #536b65;
+    margin-bottom: 20px;
 }
 
 .textarea {
@@ -31,7 +32,7 @@ body {
 
 
 .info {
-    margin: 30px auto;
+    margin: 10px auto;
     font: italic 24px Arial;
     color: #605b6b;
 }
@@ -75,7 +76,7 @@ body {
 .Enter,
 .ShiftLeft,
 .ShiftRight {
-    flex-grow: 0.35;
+    flex-grow: 0.25;
 
 }
 

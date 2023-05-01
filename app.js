@@ -39,13 +39,14 @@ row5.className = 'keyboard__row5';
 row5.classList.add('row');
 keyboard.append(row5);
 
-
 let info = document.createElement('p');
 info.className = 'info';
 wrapper.append(info);
 info.innerText = 'Клавиатура создана в ОС Windows';
 
 (function () {
+
+
   const allKeys1 = [
     { keyCode: 'Backquote', keyName: '`' },
     { keyCode: 'Digit1', keyName: '1' },
@@ -124,28 +125,42 @@ info.innerText = 'Клавиатура создана в ОС Windows';
     key.innerText = el.keyName;
 
     document.addEventListener('keydown', function keyDown(event) {
-      if (event.code === el.keyCode) {
-        key.classList.add('active');
-        textarea.value += `${el.keyName}`;
+      if (event.code === 'Tab') {
+        textarea.value += ' ';
 
-      }
+      } else
+        if (event.code === el.keyCode) {
+          key.classList.add('active');
+          textarea.value += `${el.keyName}`;
+
+        }
     });
+
     document.addEventListener('keyup', function keyUp(event) {
       if (event.code === el.keyCode) {
         key.classList.remove('active');
       }
     });
-
     key.addEventListener('mousedown', () => {
-      key.classList.add('active');
-      textarea.value += `${el.keyName}`;
+      if (el.keyCode === 'Tab') {
+        textarea.value += ' ';
 
+        key.classList.add('active');
+
+      } else {
+        key.classList.add('active');
+        textarea.value += `${el.keyName}`;
+      }
     }
     );
+
+
     key.addEventListener('mouseup', () => {
       key.classList.remove('active');
     }
     );
+
+
   }
   );
 
@@ -201,14 +216,13 @@ info.innerText = 'Клавиатура создана в ОС Windows';
 
   const allKeys4 = [
     { keyCode: 'ShiftLeft', keyName: 'Shift' },
-    { keyCode: 'KeyZ', keyName: 'a' },
-    { keyCode: 'KeyX', keyName: 's' },
-    { keyCode: 'KeyC', keyName: 'd' },
-    { keyCode: 'KeyV', keyName: 'f' },
-    { keyCode: 'KeyB', keyName: 'g' },
-    { keyCode: 'KeyN', keyName: 'h' },
-    { keyCode: 'KeyN', keyName: 'j' },
-    { keyCode: 'KeyM', keyName: 'k' },
+    { keyCode: 'KeyZ', keyName: 'z' },
+    { keyCode: 'KeyX', keyName: 'x' },
+    { keyCode: 'KeyC', keyName: 'c' },
+    { keyCode: 'KeyV', keyName: 'v' },
+    { keyCode: 'KeyB', keyName: 'b' },
+    { keyCode: 'KeyN', keyName: 'n' },
+    { keyCode: 'KeyM', keyName: 'm' },
     { keyCode: 'Comma', keyName: ',' },
     { keyCode: 'Period', keyName: '.' },
     { keyCode: 'Slash', keyName: '/' },
@@ -259,6 +273,12 @@ info.innerText = 'Клавиатура создана в ОС Windows';
     { keyCode: 'ArrowRight', keyName: '➤' },
     { keyCode: 'ControlRight', keyName: 'Ctrl' },
   ];
+  document.addEventListener('keydown', function space(event) {
+    if (event.code === 'Space') {
+      textarea.value += " ";
+    }
+  });
+
   allKeys5.forEach(el => {
 
     let key = document.createElement('div');
@@ -267,11 +287,15 @@ info.innerText = 'Клавиатура создана в ОС Windows';
     row5.append(key);
     key.innerText = el.keyName;
     document.addEventListener('keydown', function keyDown(event) {
-      if (event.code === el.keyCode) {
+      if (event.code === 'Space') {
+        textarea.value += '';
         key.classList.add('active');
-        textarea.value += `${el.keyName}`;
+      } else
+        if (event.code === el.keyCode) {
+          key.classList.add('active');
+          textarea.value += `${el.keyName}`;
 
-      }
+        }
     });
     document.addEventListener('keyup', function keyUp(event) {
       if (event.code === el.keyCode) {
@@ -279,16 +303,26 @@ info.innerText = 'Клавиатура создана в ОС Windows';
       }
     });
 
-    key.addEventListener('mousedown', () => {
-      key.classList.add('active');
-      textarea.value += `${el.keyName}`;
 
-    }
-    );
     key.addEventListener('mouseup', () => {
       key.classList.remove('active');
     }
     );
+
+    key.addEventListener('mousedown', () => {
+      if (el.keyCode === 'Space') {
+        textarea.value += " ";
+
+        key.classList.add('active');
+
+      } else {
+        key.classList.add('active');
+        textarea.value += `${el.keyName}`;
+      }
+    }
+    );
+
+
   }
   );
 
